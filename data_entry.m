@@ -1,0 +1,13 @@
+clc;
+clear var;
+close all;
+busdata=csvread('E:\optimal placement\busdata.csv');
+linedata=csvread('E:\optimal placement\linedata.csv');
+basemva=100;
+accuracy=0.001;
+accel=1.8;
+maxiter=12;
+lfybus;
+lfnewton;
+busout;
+lineflow;
