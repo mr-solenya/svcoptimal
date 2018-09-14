@@ -13,3 +13,7 @@ git remote -v
 
 git remote add <nickname> <repositoryaddress.git>
 
+git remove rn <remote name>
+
+
+git push <remote name> master --force
