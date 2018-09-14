@@ -26,7 +26,6 @@ maxerror = 1; converge=1;
 iter = 0;
 % Start of iterations
 clear A  DC   J  DX
-%DC=ones(1,53);% changed by tuneer------------------------------------------------
 while maxerror >= accuracy & iter <= maxiter % Test for max. power mismatch
 for i=1:m
 for k=1:m
@@ -69,10 +68,10 @@ J11=0; J22=0; J33=0; J44=0;
            Qgc = Q(n)*basemva + Qd(n) - Qsh(n);
            if iter <= 7                  % Between the 2th & 6th iterations
               if iter > 2                % the Mvar of generator buses are
-                if Qgc  < Qmin(n),       % tested. If not within limits Vm(n)-----------------------> changed here by tuneer previously Vm(n) = Vm(n) + 0.01;
+                if Qgc  < Qmin(n),       % tested. If not within limits Vm(n)---------> changed here by tuneer previously Vm(n) = Vm(n) + 0.01;
                     Qgc=Qmin(n);    % is changed in steps of 0.01 pu to
                     busdata(n,2)=0; %converting to PQ bus changed by tuneer
-                elseif Qgc  > Qmax(n),   % bring the generator Mvar within -------------------------> changed here by tuneer previously Vm(n) = Vm(n) - 0.01;
+                elseif Qgc  > Qmax(n),   % bring the generator Mvar within -----------> changed here by tuneer previously Vm(n) = Vm(n) - 0.01;
                     Qgc=Qmax(n);
                     busdata(n,2)=0;%converting to PQ bus changed by tuneer
                 end % the specified limits.

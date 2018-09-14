@@ -1,0 +1,15 @@
+---------make new commit-----------
+
+
+git init
+
+git status
+
+git add .
+
+git commit -m "<comment>"
+
+git remote -v
+
+git remote add <nickname> <repositoryaddress.git>
+
